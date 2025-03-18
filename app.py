@@ -24,7 +24,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 @app.route('/', methods=['GET', 'POST'])
-def upload_file():
+def index():
     if request.method == 'POST':
         # Fetch form data
         wd = request.form['directory']  # Directory path entered by the user
@@ -193,4 +193,4 @@ def process_file(wd, column_date, format_date, date_in_columns, date_columns, re
     return output_filepath
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
+    app.run(host="0.0.0.0", port=5000)
