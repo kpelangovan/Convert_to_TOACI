@@ -193,4 +193,4 @@ def process_file(wd, column_date, format_date, date_in_columns, date_columns, re
     return output_filepath
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
